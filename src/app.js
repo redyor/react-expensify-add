@@ -10,27 +10,27 @@ import './styles/style.scss';
 import 'react-dates/lib/css/_datepicker.css';
 
 const store = configureStore();
-store.dispatch(
-  addExpense({ description: 'Water Bill', amount: 100000, createdAt: 100 })
-);
-store.dispatch(
-  addExpense({
-    description: 'Gaz Bill',
-    amount: 109555,
-    createdAt: 1000,
-  })
-);
-store.dispatch(
-  addExpense({
-    description: 'Rent',
-    amount: 500,
-    createdAt: 132165651,
-  })
-);
+// store.dispatch(
+//   addExpense({ description: 'Water Bill', amount: 100000, createdAt: 100 })
+// );
+// store.dispatch(
+//   addExpense({
+//     description: 'Gaz Bill',
+//     amount: 109555,
+//     createdAt: 1000,
+//   })
+// );
+// store.dispatch(
+//   addExpense({
+//     description: 'Rent',
+//     amount: 500,
+//     createdAt: 132165651,
+//   })
+// );
 
-const state = store.getState();
-const VisibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-console.log(VisibleExpenses);
+// const state = store.getState();
+// const VisibleExpenses = getVisibleExpenses(state.expenses, state.filters);
+// console.log(VisibleExpenses);
 
 const appRoot = document.getElementById('app');
 
