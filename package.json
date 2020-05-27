@@ -27,11 +27,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^3.5.2",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "enzyme-to-json": "^3.4.4",
     "express": "^4.17.1",
-    "live-server": "^1.2.1",
     "mini-css-extract-plugin": "^0.9.0",
     "moment": "^2.25.3",
     "normalize.css": "^8.0.1",
@@ -43,18 +39,22 @@
     "react-modal": "^3.11.2",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
-    "react-test-renderer": "^16.13.1",
     "redux": "^4.0.5",
     "sass": "^1.26.3",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.4",
     "uuid": "^7.0.3",
     "validator": "^13.0.0",
-    "webpack": "^4.43.0",
-    "webpack-dev-server": "^3.10.3"
+    "webpack": "^4.43.0"
   },
   "devDependencies": {
     "jest": "^26.0.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.4.4",
+    "live-server": "^1.2.1",
+    "react-test-renderer": "^16.13.1",
+    "webpack-dev-server": "^3.10.3"
   }
 }
