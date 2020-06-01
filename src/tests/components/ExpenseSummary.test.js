@@ -7,7 +7,7 @@ import getExpensesTotal from '../../selectors/expenses-total';
 it('should render properly all expenses more than 1', () => {
   const total = getExpensesTotal(expenses);
   const wrapper = shallow(
-    <ExpensesSummuary expenses={expenses} total={total} />
+    <ExpensesSummuary expensesCount={expenses.length} expensesTotal={total} />
   );
   expect(wrapper).toMatchSnapshot();
 });
@@ -15,7 +15,10 @@ it('should render properly all expenses more than 1', () => {
 it('should render properly 1 expense more than 1', () => {
   const total = getExpensesTotal([expenses[1]]);
   const wrapper = shallow(
-    <ExpensesSummuary expenses={[expenses[1]]} total={total} />
+    <ExpensesSummuary
+      expensesCount={[expenses[1]].length}
+      expensesTotal={total}
+    />
   );
   expect(wrapper).toMatchSnapshot();
 });

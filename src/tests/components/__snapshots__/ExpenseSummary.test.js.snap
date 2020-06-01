@@ -9,7 +9,6 @@ exports[`should render properly 1 expense more than 1 1`] = `
     <span>
       expense
     </span>
-     
     totaling 
     $14.00
   </p>
@@ -25,7 +24,6 @@ exports[`should render properly all expenses more than 1 1`] = `
     <span>
       expenses
     </span>
-     
     totaling 
     $63.00
   </p>

@@ -1,3 +1,5 @@
 node_modules
 public/dist/
 *workspace
+.env.development
+.env.test
