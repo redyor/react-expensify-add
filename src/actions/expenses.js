@@ -38,6 +38,27 @@ export const removeExpense = ({ id } = {}) => ({
   type: 'REMOVE_EXPENSE',
   id,
 });
+
+// Remove expense from firebase
+export const startRemoveExpense = ({ id }) => {
+  return (dispach) => {
+    return database
+      .ref(`expenses/${id}`)
+      .remove()
+      .then(() => {
+        dispach(
+          removeExpense({
+            id,
+          })
+        );
+        //  console('Remove data from database.');
+      })
+      .catch((e) => {
+        // console.log('Error', e);
+      });
+  };
+};
+
 // EDIT_EXPENSE
 export const editExpense = (id, updates) => ({
   type: 'EDIT_EXPENSE',
