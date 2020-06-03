@@ -21,6 +21,8 @@ const expenseReducer = (state = expenseReducerDefaultState, action) => {
           return expense;
         }
       });
+    case 'SET_EXPENSES':
+      return action.expenses;
     //   const expense = state.find(({ id }) => id === action.expense.id);
     //   const { description, note, amount, createdAt } = action.expense;
     //   return {

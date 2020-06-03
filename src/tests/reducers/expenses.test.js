@@ -1,6 +1,7 @@
 import expenseReducer from '../../reducers/expenses';
 import moment from 'moment';
 import expenses from '../fixtures/expenses';
+import { act } from 'react-test-renderer';
 
 test('should set default', () => {
   const state = expenseReducer(undefined, { type: '@@INIT' });
@@ -73,4 +74,12 @@ test('should not edit an expense if expense not found', () => {
   const state = expenseReducer(expenses, action);
   expect(state).toEqual(expenses);
   // expect(state[0].amount).toBe(amount);
+});
+test('should set expenses', () => {
+  const action = {
+    type: 'SET_EXPENSES',
+    expenses: [expenses[1]],
+  };
+  const state = expenseReducer(expenses, action);
+  expect(state).toEqual([expenses[1]]);
 });
