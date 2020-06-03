@@ -67,6 +67,21 @@ export const editExpense = (id, updates) => ({
   // console.log(id, description, note, amount, createdAt);
 });
 
+export const startEditExpense = (id, updates) => {
+  return (dispatch) => {
+    return database
+      .ref(`expenses/${id}`)
+      .update(updates)
+      .then(() => {
+        // console.log('Data Changed');
+        dispatch(editExpense(id, updates));
+      })
+      .catch((e) => {
+        console.log('Err : ', e);
+      });
+  };
+};
+
 export const setExpenses = (expenses) => ({
   type: 'SET_EXPENSES',
   expenses,
