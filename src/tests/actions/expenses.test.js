@@ -19,7 +19,7 @@ beforeEach((done) => {
   expenses.forEach(({ id, description, amount, note, createdAt }) => {
     expenseData[id] = { description, note, amount, createdAt };
   });
-  console.log(expenseData);
+  // console.log(expenseData);
 
   database
     .ref('expenses')

@@ -1,10 +1,10 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
 import expenseReducer from '../reducers/expenses';
 import filterReducer from '../reducers/filters';
-import thunk from 'redux-thunk';
-
-const composeEnhancers =
-  window.__REDUX_DEVTOOLS_EXTENSION__COMPOSE__ || compose;
+import authReducer from '../reducers/auth';
+// eslint-disable-next-line no-underscore-dangle
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 // Creating store
 export default () => {
@@ -12,6 +12,7 @@ export default () => {
     combineReducers({
       expenses: expenseReducer,
       filters: filterReducer,
+      auth: authReducer,
     }),
     composeEnhancers(applyMiddleware(thunk))
     // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()

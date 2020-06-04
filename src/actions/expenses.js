@@ -25,10 +25,10 @@ export const startAddExpense = (expenseData = {}) => {
             ...expense,
           })
         );
-        console('Saving data now dispatch?');
+        // console('Saving data now dispatch?');
       })
       .catch((e) => {
-        console.log('Error', e);
+        //console.log('Error', e);
       });
   };
 };
@@ -77,7 +77,7 @@ export const startEditExpense = (id, updates) => {
         dispatch(editExpense(id, updates));
       })
       .catch((e) => {
-        console.log('Err : ', e);
+        //  console.log('Err : ', e);
       });
   };
 };
@@ -101,11 +101,11 @@ export const startSetExpenses = () => {
             ...childSnapshot.val(),
           });
         });
-        console.log(expenses);
+        // console.log(expenses);
         dispatch(setExpenses(expenses));
       })
       .catch((e) => {
-        console.log('error fetching data', e);
+        // console.log('error fetching data', e);
       });
   };
 };
